@@ -1,0 +1,177 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <div class="badge-pill">🚀  Learning Platform for Computer Science</div>
+                    <h1 class="hero-title">Master Computer Science with AI-Powered Learning</h1>
+                    <p class="hero-description">
+                        Join thousands of students mastering programming, data structures, algorithms, and more through our interactive platform.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="/register" class="btn btn-primary hero-btn">
+                            Start Learning Now
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 position-relative" data-aos="fade-left">
+                    <div class="hero-image-wrapper">
+                        <div class="floating-card card1">
+                            <i class="fas fa-code"></i>
+                            <span>Python Mastery</span>
+                        </div>
+                        <div class="floating-card card2">
+                            <i class="fas fa-brain"></i>
+                            <span>AI Learning</span>
+                        </div>
+                        <div class="floating-card card3">
+                            <i class="fas fa-trophy"></i>
+                            <span>Achievements</span>
+                        </div>
+                        <div class="floating-card card4">
+                            <i class="fas fa-database"></i>
+                            <span>Backend Development</span>
+                        </div>
+                        <div class="floating-card card5">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Frontend Design</span>
+                        </div>
+                        <div class="floating-card card6">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile Development</span>
+                        </div>
+                        <div class="floating-card card7">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Full Stack</span>
+                        </div>
+                        <div class="floating-card card8">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Data Science</span>
+                        </div>
+                        
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Why Choose DOT APP?</h2>
+                <p class="section-subtitle">Experience a revolutionary approach to learning computer science</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="feature-title">Structured Learning</h3>
+                        <p class="feature-description">Follow our carefully crafted curriculum designed by industry experts</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i>Step-by-step progression</li>
+                            <li><i class="fas fa-check"></i>Practical projects</li>
+                            <li><i class="fas fa-check"></i>Industry-relevant skills</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="feature-title">AI-Powered Learning</h3>
+                        <p class="feature-description">Learn smarter with our adaptive AI technology</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i>Personalized learning paths</li>
+                            <li><i class="fas fa-check"></i>Real-time feedback</li>
+                            <li><i class="fas fa-check"></i>Smart progress tracking</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 class="feature-title">Gamified Experience</h3>
+                        <p class="feature-description">Stay motivated with engaging gamification</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i>Earn certificates</li>
+                            <li><i class="fas fa-check"></i>Complete challenges</li>
+                            <li><i class="fas fa-check"></i>Track achievements</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Path Section -->
+    <section class="learning-path-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Your Learning Journey</h2>
+                <p class="section-description">Follow our proven path to success</p>
+            </div>
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-md-4 mb-4">
+                    <button class="path-button" onclick="showPathImage('frontend')">
+                        <i class="fas fa-laptop-code"></i>
+                        Front-End Developer
+                    </button>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <button class="path-button" onclick="showPathImage('backend')">
+                        <i class="fas fa-server"></i>
+                        Back-End Developer
+                    </button>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <button class="path-button" onclick="showPathImage('ai')">
+                        <i class="fas fa-brain"></i>
+                        AI Engineer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Popup Modal -->
+    <div class="modal fade" id="pathModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="pathImage" src="" alt="Learning Path" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2 class="cta-title" data-aos="fade-up">📢 Join Us for Our Exclusive Webinar!</h2>
+            <p class="cta-description" data-aos="fade-up" data-aos-delay="100">
+                Gain valuable insights, explore new opportunities, and interact with industry experts.
+            </p>
+            <a href="/register" class="btn btn-primary cta-button" data-aos="fade-up" data-aos-delay="200">
+                Get Register Now
+                <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </section>
+{% endblock %}
