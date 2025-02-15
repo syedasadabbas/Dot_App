@@ -1,0 +1,55 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Registration Form -->
+<section class="registration-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="form-card" data-aos="fade-up">
+                    <div class="form-header">
+                        <h2>Join DOT APP Webinar</h2>
+                        <p>Start your journey to becoming a tech leader</p>
+                    </div>
+                    <div class="form-body">
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-success">{{ message }}</div>
+                            {% endfor %}
+                        {% endif %}
+                        <form method="post" class="registration-form">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="full_name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="full_name" name="full_name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone_number" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone_number" name="phone_number" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="university_and_year" class="form-label">University & Year of Study</label>
+                                <input type="text" class="form-control" id="university_and_year" name="university_and_year" required>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="want_early_access" name="want_early_access">
+                                <label class="form-check-label" for="want_early_access">I want early access to DOT APP</label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="questions" class="form-label">Any questions for us?</label>
+                                <textarea class="form-control" id="questions" name="questions" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn hero-btn w-100">Join Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
